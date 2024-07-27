@@ -61,3 +61,47 @@ class RecipeChatbotGUI:
         self.submit_button.grid(row=5, column=0, columnspan=2, pady=20)
         self.output_label = ttk.Label(master, text="", font=('Helvetica', 12))
         self.output_label.grid(row=6, column=0, columnspan=2, pady=10)
+
+    def get_recipe(self):
+        ingredients = self.ingredients_entry.get()
+        dish_type = self.dish_type_var.get()
+        if not ingredients:
+            messagebox.showwarning("Incomplete Information",
+                                   "Please enter at least one ingredient.")
+            return
+        user_input = f" Using the following ingredients create a proper and edible meal: '{ingredients}' with which is of the following dish type: ({dish_type}) Make sure to not create anything crazy and you may suggest the user to purchase at max 2 ingredients"
+        try:
+            bot_response = generate_response(user_input)
+            self.output_label.config(text=bot_response)
+        except Exception as e:
+            messagebox.showerror("Error", f"An error occurred: {str(e)}")
+
+
+def generate_response(user_message):
+    try:
+        chat_history = [
+            {
+                "role":
+                "system",
+                "content":
+                "(answer everything with according to the question I give ."
+            },
+            {
+                "role": "user",
+                "content": user_message
+            },
+        ]
+        response = openai.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=chat_history,
+        )
+        return response['choices'][0]['message']['content'].strip()
+    except Exception as e:
+        raise e
+
+
+root = ThemedTk(theme="arc")
+root.title("Recipify It!")
+root.geometry("850x750")
+app = RecipeChatbotGUI(root)
+root.mainloop()
