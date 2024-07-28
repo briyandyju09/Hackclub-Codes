@@ -17,4 +17,6 @@ label = Label(root, font=('calibri', 40, 'bold'),
 
 label.pack(anchor='center')
 time()
+
+mainloop()
  
