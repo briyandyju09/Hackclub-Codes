@@ -1,8 +1,7 @@
 
 # Python Projects
 
-This project repository contains a diverse collection of Python scripts designed to help with various everyday tasks and programming challenges. From automation tools like `Instagramautomater.py` and `emailautomation.py`, to practical applications such as `budgeter.py` and `calorie.py`, the repo offers a range of utilities for personal productivity and convenience. There are also fun and educational scripts like `2048.py` and `cli_hangman.py`, as well as tools for managing finances, health, and data. Whether you're looking to automate routine tasks, manage your schedule, or just experiment with Python, this repository provides a wealth of options to explore and use.
-
+This project repository contains a diverse collection of Python scripts designed to help with various everyday tasks and programming challenges. From automation tools like `Instagramautomater.py` and `emailautomation.py`, to practical applications such as `budgeter.py` and `calorie.py`, this repo offers a range of utilities for personal productivity and convenience. There are also fun and educational scripts like `2048.py` and `cli_hangman.py`, as well as tools for managing finances, health, and data. Whether you're looking to automate routine tasks, managing your schedule, or just experiment around with Python, this repository provides plenty of options to explore and use.
 
 
 
@@ -31,9 +30,9 @@ Make sure you have read the installation part of this README first!!
 
 ## This Folder Features: (Top 10 projects)
 
-- 2048.py - A script for the popular 2048 puzzle game.
-- notepad.py - A simple text editor with file handling capabilities.
-- emailautomation.py - Automates the sending and management of emails.
+- 2048.py - The popular 2048 puzzle game made with python!
+- notepad.py - A simple text editor with file handling capabilities that replicates the WIN10 notepad.
+- emailautomation.py - Automates sending and managing of emails.
 - budgeter.py - Helps with budgeting and managing personal finances.
 - fitness.py - Assists with tracking fitness routines and progress.
 - calendar.py - Manages and displays calendar events.
